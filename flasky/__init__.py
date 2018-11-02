@@ -17,9 +17,11 @@ def create_app(config_name=None):
     else:
         app.config.from_object(DevelopmentConfig)
         # database setup
-        db.connect('ec2-54-221-225-11.compute-1.amazonaws.com', 'd22v3rkkal8rou', 'ipjynsshkkbzgv
-', '
-fbd36334598b49807a167f261daaa09b41e4f2835c6ad7cbcc7085152dcec863', '5432')
+        db.connect('ec2-54-221-225-11.compute-1.amazonaws.com',
+                   'd22v3rkkal8rou', 'ipjynsshkkbzgv',
+                   'fbd36334598b49807a167f261daaa09b41e4f2835c6ad7cbcc7085152dcec863',
+                   '5432')
+
         db.create_db_tables()
     # register blueprints
     app.register_blueprint(products_bp)

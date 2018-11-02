@@ -17,7 +17,7 @@ def create_app(config_name=None):
     else:
         app.config.from_object(DevelopmentConfig)
         # database setup
-        db.connect('my_store', 'Myko', '1987')
+        db.connect('')
         db.create_db_tables()
     # register blueprints
     app.register_blueprint(products_bp)
